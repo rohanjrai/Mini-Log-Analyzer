@@ -1,16 +1,14 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-struct LogEntry {
-    char ipAddress[30];
-    int failedCount;
-};
+#define MAX_LENGTH 30
+#define LOGIN_STATUS 30
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
-int trackCurrentIp(char ip[]);
+void checkIP(char ip[], char loginStatus[], int *failedAttempts, int *successfulAttempts);
 
 #endif
